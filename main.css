@@ -2,33 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
 body {
     background-color: #09090a;
-    color: white; 
     height: 100vh;
+    transition: background 1s;
+    color: white;
+    transition: 1.5s;
 }
   
 header {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    padding: 48px;
-    position: fixed;
-    width: 100%;
+    padding: 40px;
+    width: auto;
     height: 150px;
     backdrop-filter: blur(1.5rem);
     background-color: transparent;
-    
 }
   
 button {
     padding: 16px 24px;
     border-radius: 8px;
-    border: 1px solid #8b5cf6;
+    border: 2px solid #8b5cf6;
     background-color: transparent;
-    color: white;
+    color: inherit;
     display: flex;
     align-items: center;
     gap: 12px;  
@@ -36,24 +36,25 @@ button {
     font-weight: 600;
     font-size: 16px;
     line-height: 125%;
+    transition: 1s;
 }
-  
+
 #form-habits {
     display: flex; 
-    padding: 182px 48px 48px;
+    padding: 15px 20px 20px;
 }
   
 .habits {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 30px;
 }
   
 .habit {
-    width: 64px;
-    height: 64px;
-    font-size: 32px; 
+    width: 60px;
+    height: 60px;
+    font-size: 30px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,34 +62,33 @@ button {
   
 .days {
     display: flex;
-    gap: 48px;
+    gap: 49px;
     margin-left: 32px;
 }
   
 .day {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 30px;
 }
   
 
 .day div {
     margin-bottom: 8px;
     font-family: 'Roboto Mono';
-    font-size: 20px;
+    font-size: 18px;
     line-height: 125%; 
-    color: #A1A1AA; 
     text-align: center;
+    transition: 1.2s;
 }
   
 input {
     appearance: none;
     -webkit-appearance: none;  
-    width: 64px;
-    height: 64px; 
-    border: 2px solid #27272A;
-    border-radius: 8px;  
+    width: 60px;
+    height: 60px; 
     background: #18181B;
+    border-radius: 8px;  
 }
   
 input:checked {
@@ -100,4 +100,43 @@ input:checked {
     button div {
         display:none;
     }
+}
+
+.footer {
+    position: relative;
+    height: 10%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+}
+
+.theme{
+    position: relative;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 25px;
+    border:3px solid #8b5cf6;
+    cursor: pointer;
+    background-color:inherit;
+}
+.ball{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.2rem;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #8b5cf6;
+    transition: left 0.8s;
+}
+
+.ball-move{
+    left: calc(100% - 2.2rem);
+}
+
+.white{
+    background-color: #f8f7f7;
+    color: black;
 }

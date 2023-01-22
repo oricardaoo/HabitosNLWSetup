@@ -31,3 +31,9 @@ const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}
 nlwSetup.setData(data)
 // carrega as informações armazenadas
 nlwSetup.load()
+
+
+document.querySelector('.ball').addEventListener('click', (e)=>{
+    e.target.classList.toggle('ball-move');
+    document.body.classList.toggle('white');
+});
